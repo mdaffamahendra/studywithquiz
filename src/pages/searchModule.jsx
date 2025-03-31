@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Search } from "lucide-react";
 import Input from "../components/Element/Input";
 import { debounce } from "lodash";
-import FieldModule from "../components/Fragment/FIeldModule";
+import FieldModule from "../components/Fragment/FieldModule";
 import SearchResultsModule from "../components/Fragment/SearchResultsModule";
 import PageLayout from "../components/Layout/PageLayout";
 
