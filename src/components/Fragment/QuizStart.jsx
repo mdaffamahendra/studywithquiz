@@ -15,7 +15,7 @@ const QuizStart = ({
   handleAnswerSelect,
 }) => {
   return (
-    <div className="flex flex-col md:flex-row w-full max-w-4xl py-18 px-16 gap-6">
+    <div className="flex flex-col md:flex-row w-full max-w-4xl py-18 px-2 gap-6">
       <div className="w-full md:w-3/4 bg-white p-6 rounded-lg shadow-md">
         <p className="text-lg font-bold mb-4">
           {currentQuestionIndex}. {question.question}

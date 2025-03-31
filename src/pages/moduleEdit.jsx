@@ -40,7 +40,6 @@ const EditModule = () => {
         await dispatch(fetchModuleById({ url: `materi/${id}`, token }))
           .unwrap()
           .then((res) => {
-            console.log(res);
             setContent(res.content);
             setTitle(res.title);
             setField(res.field);
@@ -75,7 +74,6 @@ const EditModule = () => {
       )
         .unwrap()
         .then((res) => {
-          console.log(res);
           Swal.fire({
             icon: "success",
             title: "Berhasil",
@@ -105,7 +103,7 @@ const EditModule = () => {
 
   return (
     <PageLayout>
-      <div className="min-h-screen flex items-center justify-center font-poppins py-24 px-12">
+      <div className="min-h-screen flex items-center justify-center font-poppins py-24 px-2">
         <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl">
           <Button
             onClick={() => navigate(`/module`)}
@@ -116,7 +114,7 @@ const EditModule = () => {
             <Delete size={16} />
           </Button>
           <h2 className="text-2xl font-bold mb-4 text-indigo-600">
-            Buat Materi
+            Edit Materi
           </h2>
           <form onSubmit={handleEdit}>
             <div className="mb-4">
@@ -155,7 +153,7 @@ const EditModule = () => {
             </div>
             <button
               type="submit"
-              className="bg-indigo-600 text-white px-4 py-2 rounded w-full hover:bg-indigo-700 mt-8"
+              className="bg-indigo-600 text-white px-4 py-2 rounded w-full hover:bg-indigo-700 mt-24"
             >
               Update
             </button>

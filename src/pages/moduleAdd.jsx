@@ -34,7 +34,6 @@ const AddModule = () => {
         },
         token
       ).then((res) => {
-        console.log(res);
         Swal.fire({
           icon: "success",
           title: "Berhasil",
@@ -63,7 +62,7 @@ const AddModule = () => {
 
   return (
     <PageLayout>
-      <div className="min-h-screen flex items-center justify-center font-poppins px-12 py-24">
+      <div className="min-h-screen flex items-center justify-center font-poppins px-2 py-24">
         <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl">
           <Button
             onClick={() => navigate(`/module`)}
@@ -112,7 +111,7 @@ const AddModule = () => {
             </div>
             <button
               type="submit"
-              className="bg-indigo-600 text-white px-4 py-2 rounded w-full hover:bg-indigo-700 mt-8"
+              className="bg-indigo-600 text-white px-4 py-2 rounded w-full hover:bg-indigo-700 mt-24"
             >
               Simpan
             </button>

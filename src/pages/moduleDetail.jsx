@@ -39,7 +39,7 @@ const ModuleDetailPage = () => {
 
   return (
     <PageLayout>
-      <div className="w-full ql-snow font-poppins text-white flex flex-col justify-center items-center px-8 py-24">
+      <div className="w-full ql-snow font-poppins text-white flex flex-col justify-center items-center px-2 py-24">
         <div className="flex self-start items-center justify-center">
           <Button
             onClick={() => navigate(-1)}

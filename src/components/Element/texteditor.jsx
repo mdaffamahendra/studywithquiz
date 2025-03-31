@@ -67,7 +67,7 @@ const TextEditor = ({ content, setContent, token }) => {
         onChange={setContent}
         modules={modules}
         placeholder="Tulis materi di sini..."
-        className="h-56 font-poppins"
+        className="h-64 font-poppins"
       />
       {/* <div className="mt-24 p-4 border rounded bg-gray-50 ql-snow">
         <h2 className="font-bold">Preview:</h2>

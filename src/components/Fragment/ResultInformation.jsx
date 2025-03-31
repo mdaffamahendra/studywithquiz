@@ -43,7 +43,7 @@ const ResultInformation = ({ quizData, formatDateTime, formatTime }) => {
             className="mt-4 bg-indigo-600 text-white px-3 py-1 md:px-4 md:py-2 rounded-lg hover:bg-indigo-700 text-sm md:text-md"
             onClick={() => navigate("/")}
           >
-            Back Home
+            Home
           </button>
         </div>
       </div>

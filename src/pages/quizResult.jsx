@@ -45,7 +45,7 @@ const QuizResult = () => {
 
   return (
     <PageLayout>
-      <div className="max-w-4xl mx-auto text-white py-24 px-12">
+      <div className="max-w-4xl mx-auto text-white py-24 px-2">
         <ResultInformation
           quizData={quizData}
           formatDateTime={formatDateTime}

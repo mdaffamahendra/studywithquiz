@@ -43,7 +43,7 @@ const Timer = ({ initialTime, onTimeUp, isQuizFinished, setDuration, setStartQui
   const seconds = time % 60;
 
   return (
-    <div className={`fixed top-4 right-4 bg-black text-white px-4 py-2 rounded-lg shadow-lg text-lg font-semibold ${isQuizFinished ? "hidden" : "block fixed"}`}>
+    <div className={`fixed top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg text-lg font-semibold ${isQuizFinished ? "hidden" : "block fixed"}`}>
       {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
     </div>
   );

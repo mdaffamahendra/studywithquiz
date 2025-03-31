@@ -22,6 +22,7 @@ const QuizPlayPage = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [answers, setAnswers] = useState([]);
   const [finished, setFinished] = useState(false);
+  const [finishedTimer, setFinishedTimer] = useState(false);
   const [timer, setTimer] = useState(null);
   const [startQuiz, setStartQuiz] = useState("");
   const [duration, setDuration] = useState(0);
@@ -127,6 +128,7 @@ const QuizPlayPage = () => {
 
     setAnswers(updatedAnswers);
     setFinished(true);
+    setFinishedTimer(true);
 
     // Hasil akhir
     const result = {
@@ -151,12 +153,12 @@ const QuizPlayPage = () => {
   const question = questions[currentQuestionIndex - 1];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-900 text-indigo-700">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-900 text-indigo-700 relative">
       {timer !== null && (
         <Timer
           initialTime={timer * 60}
           onTimeUp={handleSubmit}
-          isQuizFinished={finished}
+          isQuizFinished={finishedTimer}
           setDuration={setDuration}
           setStartQuiz={setStartQuiz}
         />
@@ -176,7 +178,7 @@ const QuizPlayPage = () => {
           handleAnswerSelect={handleAnswerSelect}
         />
       ) : (
-        <QuizEnd handleSubmit={handleSubmit} setFinished={setFinished}/>
+        <QuizEnd handleSubmit={handleSubmit} setFinished={setFinished} />
       )}
     </div>
   );
