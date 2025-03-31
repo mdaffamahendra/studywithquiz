@@ -37,7 +37,7 @@ const Leaderboard = () => {
 
   return (
     <PageLayout>
-      <div className="min-h-screen bg-indigo-600 px-6 py-24">
+      <div className="min-h-screen px-6 py-24">
         {quizInfo && (
           <div className="text-indigo-600 bg-white p-4 rounded-lg shadow-md mb-6">
             <h1 className="text-2xl font-semibold">{quizInfo.title}</h1>

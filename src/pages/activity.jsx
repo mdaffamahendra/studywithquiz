@@ -113,7 +113,7 @@ const ActivityPage = () => {
 
   return (
     <PageLayout>
-      <div className="font-poppins min-h-screen bg-indigo-600 text-white px-6 py-24">
+      <div className="font-poppins min-h-screen text-white px-6 py-24">
         <h1 className="text-3xl font-bold mb-6">Activity</h1>
         <ActivityInformation
           quizCount={quizCount}

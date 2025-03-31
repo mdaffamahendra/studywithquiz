@@ -39,7 +39,7 @@ const ModuleDetailPage = () => {
 
   return (
     <PageLayout>
-      <div className="w-full h-screen bg-indigo-600 ql-snow font-poppins text-white flex flex-col justify-center items-center px-8 py-24">
+      <div className="w-full ql-snow font-poppins text-white flex flex-col justify-center items-center px-8 py-24">
         <div className="flex self-start items-center justify-center">
           <Button
             onClick={() => navigate(-1)}
@@ -49,7 +49,7 @@ const ModuleDetailPage = () => {
           >
             <Delete size={24} />
           </Button>
-          <h2 className="font-bold text-white">{title}</h2>
+          <h2 className="font-bold text-white ml-2 text-md md:text-xl">{title}</h2>
         </div>
         <div
           dangerouslySetInnerHTML={{ __html: content }}

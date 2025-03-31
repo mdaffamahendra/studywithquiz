@@ -25,7 +25,7 @@ const SearchModule = () => {
     };
   }, [debouncedSearch]);
 
-  const fields =  ["Informatika", "Matematika", "Bahasa", "MIPA", "Seni Budaya", "Olahraga"];
+  const fields = ["Matematika", "Informatika", "Bahasa", "MIPA"];
 
   return (
     <PageLayout>
@@ -53,7 +53,7 @@ const SearchModule = () => {
         {query ? (
           <SearchResultsModule query={query} />
         ) : (
-          <div className="space-y-8 mx-auto">
+          <div className="space-y-8">
             {fields.map((field, index) => (
               <FieldModule key={`${field}-${index}`} field={field} />
             ))}

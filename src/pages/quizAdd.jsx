@@ -49,7 +49,7 @@ const QuizAddPage = () => {
 
   return (
     <PageLayout>
-      <div className="justify-center items-center bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-900 min-h-screen font-poppins px-6 py-24">
+      <div className="justify-center items-center min-h-screen font-poppins px-6 py-24">
         <FormQuiz
           use={"add"}
           error={error}

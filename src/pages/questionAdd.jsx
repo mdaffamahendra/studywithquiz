@@ -103,7 +103,7 @@ const AddQuestion = () => {
 
   return (
     <PageLayout>
-      <div className="justify-center items-center bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-900 min-h-screen font-poppins px-6 py-24">
+      <div className="justify-center items-center min-h-screen font-poppins px-6 py-24">
         <div className="max-w-lg mx-auto mt-10 p-6 bg-white text-indigo-600 shadow-lg rounded-lg">
           <h1 className="text-2xl font-bold text-center mb-4">Add Question</h1>
 

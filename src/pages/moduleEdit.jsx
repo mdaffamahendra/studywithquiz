@@ -105,7 +105,7 @@ const EditModule = () => {
 
   return (
     <PageLayout>
-      <div className="min-h-screen bg-indigo-600 flex items-center justify-center font-poppins py-24 px-12">
+      <div className="min-h-screen flex items-center justify-center font-poppins py-24 px-12">
         <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl">
           <Button
             onClick={() => navigate(`/module`)}

@@ -15,8 +15,8 @@ const QuizStart = ({
   handleAnswerSelect,
 }) => {
   return (
-    <div className="flex w-full max-w-4xl">
-      <div className="w-3/4 bg-white p-6 rounded-lg shadow-md">
+    <div className="flex flex-col md:flex-row w-full max-w-4xl py-18 px-16 gap-6">
+      <div className="w-full md:w-3/4 bg-white p-6 rounded-lg shadow-md">
         <p className="text-lg font-bold mb-4">
           {currentQuestionIndex}. {question.question}
         </p>
@@ -79,9 +79,9 @@ const QuizStart = ({
         </div>
       </div>
 
-      <div className="w-1/4 flex flex-col items-center bg-white text-indigo-600 p-4 rounded-lg ml-4">
+      <div className="w-full md:w-2/4 flex flex-col items-center bg-white text-indigo-600 p-6 rounded-lg">
         <h3 className="text-lg font-bold mb-2">Navigation</h3>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-5 gap-4">
           {questions.map((_, index) => (
             <Button
               key={index}

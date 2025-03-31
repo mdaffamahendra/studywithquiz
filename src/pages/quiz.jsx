@@ -71,7 +71,7 @@ const QuizPage = () => {
 
   return (
     <PageLayout>
-      <div className="justify-center items-center bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-900 min-h-screen font-poppins px-6 py-32">
+      <div className="justify-center items-center min-h-screen font-poppins px-6 py-32">
         <div className="text-white">
           <p className="text-md md:text-xl mb-2">Hello, {username}</p>
           <p className="text-2xl font-poppins font-bold">

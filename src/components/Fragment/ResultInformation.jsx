@@ -34,13 +34,13 @@ const ResultInformation = ({ quizData, formatDateTime, formatTime }) => {
         <p className="text-3xl font-extrabold mt-2">{quizData.totalScore}</p>
         <div className="flex gap-6">
           <button
-            className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+            className="mt-4 bg-indigo-600 text-white px-3 py-1 md:px-4 md:py-2 rounded-lg hover:bg-indigo-700 text-sm md:text-md"
             onClick={() => navigate(`/leaderboard/${quizData.quizId}`)}
           >
             Leaderboard
           </button>
           <button
-            className="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+            className="mt-4 bg-indigo-600 text-white px-3 py-1 md:px-4 md:py-2 rounded-lg hover:bg-indigo-700 text-sm md:text-md"
             onClick={() => navigate("/")}
           >
             Back Home

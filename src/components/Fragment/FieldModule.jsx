@@ -57,15 +57,14 @@ const FieldModule = React.memo(({ field }) => {
         {data && data.length === 0 && (
           <p className="text-white">No modules found for this field.</p>
         )}
-        <div className="w-full">
           <div
-            className="flex flex-wrap items-center justify-start gap-2 py-2 pb-3"
+            className="grid gap-4 sm:grid-cols-2 md:grid-cols-3"
           >
             {data &&
               data.map((mod) => (
                 <div
                   key={mod._id}
-                  className="bg-white shadow rounded-lg border border-indigo-600 bg-white shadow-lg px-6 py-8 rounded-lg w-96 flex flex-col justify-between items-start flex-shrink-0"
+                  className="bg-white p-4 shadow rounded-lg border border-indigo-600 bg-white shadow-lg px-6 py-8 rounded-lg "
                 >
                   <h2 className="text-lg font-semibold text-indigo-600">
                     {mod.title}
@@ -80,9 +79,7 @@ const FieldModule = React.memo(({ field }) => {
                     <Eye size={16} />
                   </Button>
                 </div>
-              ))}
-          </div>
-  
+              ))} 
         </div>
       </div>
     );

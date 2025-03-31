@@ -47,7 +47,7 @@ const Navbar = ({ role }) => {
         ];
 
   return (
-    <nav className="bg-indigo-600 text-white font-poppins fixed top-0 left-0 right-0 z-99">
+    <nav className="bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-900 text-white font-poppins fixed top-0 left-0 right-0 z-99">
       <div className="container flex justify-between items-center p-4">
         {/* Brand */}
         <h1 className="text-xl font-semibold">StudyWithQuiz</h1>
@@ -97,7 +97,7 @@ const Navbar = ({ role }) => {
 
       {/* Sidebar - Mobile */}
       <div
-        className={`fixed top-0 right-0 h-full bg-indigo-600 text-white w-1/3 p-4 transition-transform ${
+        className={`fixed top-0 right-0 h-full bg-indigo-600 text-white w-2/4 p-4 transition-transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -130,11 +130,11 @@ const Navbar = ({ role }) => {
             </button>
             {dropdownOpen && (
               <ul className="mt-2 bg-white text-black w-full shadow-lg rounded-md">
-                <li className="px-4 py-2 hover:bg-gray-200">
+                {/* <li className="px-4 py-2 hover:bg-gray-200">
                   <Link to="/settings" className="flex items-center gap-2">
                     <User size={16} /> Settings
                   </Link>
-                </li>
+                </li> */}
                 <li className="px-4 py-2 hover:bg-gray-200">
                   <button
                     onClick={handleLogout}
