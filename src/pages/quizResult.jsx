@@ -6,6 +6,7 @@ import PageLayout from "../components/Layout/PageLayout";
 import Input from "../components/Element/Input";
 import ResultInformation from "../components/Fragment/ResultInformation";
 import ResultQuestion from "../components/Fragment/ResultQuestion";
+import LoadingElement from "../components/Element/LoadingElement";
 
 const QuizResult = () => {
   const { id } = useParams();
@@ -21,7 +22,6 @@ const QuizResult = () => {
       try {
         await getData(`result-quiz/${id}`, token).then((data) => {
           setQuizData(data.quizResult);
-          console.log(data);
         });
       } catch (error) {
         console.error("Error fetching quiz result:", error);
@@ -34,15 +34,9 @@ const QuizResult = () => {
     fetchQuizResult();
   }, [id]);
 
-  if (loading)
-    return <div className="text-center mt-10 text-indigo-600">Loading...</div>;
-  if (!quizData)
-    return (
-      <div className="text-center mt-10 text-red-600">
-        Quiz result not found.
-      </div>
-    );
-
+  if (loading) {
+    return <LoadingElement />;
+  }
   return (
     <PageLayout>
       <div className="max-w-4xl mx-auto text-white py-24 px-2">

@@ -74,7 +74,7 @@ const ActivityPage = () => {
               Swal.fire({
                 icon: "success",
                 title: "Deleted!",
-                text: "Quiz has been deleted!",
+                text: "Activity has been deleted!",
                 scrollbarPadding: false,
               });
             }

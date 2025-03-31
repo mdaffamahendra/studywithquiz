@@ -39,7 +39,7 @@ const ModuleDetailPage = () => {
 
   return (
     <PageLayout>
-      <div className="w-full ql-snow font-poppins text-white flex flex-col justify-center items-center px-2 py-24">
+      <div className="w-full ql-snow font-poppins text-white flex flex-col justify-start items-center px-2 py-24 min-h-screen">
         <div className="flex self-start items-center justify-center">
           <Button
             onClick={() => navigate(-1)}
@@ -53,7 +53,7 @@ const ModuleDetailPage = () => {
         </div>
         <div
           dangerouslySetInnerHTML={{ __html: content }}
-          className="ql-editor bg-white text-indigo-600 p-6 m-6 rounded min-h-[80vh] w-[80%]"
+          className="ql-editor bg-white text-indigo-600 p-6 m-6 rounded w-full"
         />
       </div>
     </PageLayout>
