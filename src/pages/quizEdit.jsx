@@ -19,7 +19,7 @@ const QuizEditPage = () => {
     quizId: "",
     title: "",
     description: "",
-    field: "Matematika",
+    field: "",
     timeStart: "",
     timeEnd: "",
     timer: 0,
@@ -38,7 +38,7 @@ const QuizEditPage = () => {
           quizId: quizData.quizId || "",
           title: quizData.title || "",
           description: quizData.description || "",
-          field: quizData.field,
+          field: quizData.field || "Matematika",
           timeStart: quizData.timeStart
             ? new Date(quizData.timeStart).toISOString().slice(0, 16)
             : "",
