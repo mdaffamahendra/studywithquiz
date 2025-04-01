@@ -29,7 +29,7 @@ const CardQuizStudent = ({ quiz, formatDateTime }) => {
     }
 
     Swal.fire({
-      title: `Ingin mengerjakan ${title}?`,
+      text: `Ingin mengerjakan ${title}?`,
       icon: "question",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
