@@ -25,13 +25,10 @@ const EditModule = () => {
   const fieldOptions = [
     field || "",
     "Matematika",
-    "Fisika",
-    "Kimia",
-    "Biologi",
+    "MIPA",
     "Informatika",
-    "Sejarah",
-    "Olahraga",
     "Seni Budaya",
+    "Olahraga",
   ];
 
   useEffect(() => {
