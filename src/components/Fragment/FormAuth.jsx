@@ -39,7 +39,7 @@ const FormAuth = (props) => {
           type={"password"}
           name={"password"}
           max={"8"}
-          min={"4"}
+          min={"8"}
           onChange={onChange}
           placeholder={"********"}
         >
