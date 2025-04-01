@@ -9,19 +9,19 @@ const TableActivityLog = ({handleSort, handleDelete, filteredActivities}) => {
         <thead>
           <tr>
             <th
-              className="border-b p-2 cursor-pointer text-sm md:text-md whitespace-nowrap"
+              className="border-b p-4 cursor-pointer text-sm md:text-md whitespace-nowrap"
               onClick={() => handleSort("idQuiz.title")}
             >
               Quiz Name <ArrowUpDown size={16} />
             </th>
             <th
-              className="border-b p-2 cursor-pointer text-sm md:text-md whitespace-nowrap"
+              className="border-b p-4 cursor-pointer text-sm md:text-md whitespace-nowrap"
               onClick={() => handleSort("score")}
             >
               Score <ArrowUpDown size={16} />
             </th>
             <th
-              className="border-b p-2 cursor-pointer text-sm md:text-md whitespace-nowrap"
+              className="border-b p-4 cursor-pointer text-sm md:text-md whitespace-nowrap"
               onClick={() => handleSort("date")}
             >
               Date <ArrowUpDown size={16} />
@@ -34,16 +34,16 @@ const TableActivityLog = ({handleSort, handleDelete, filteredActivities}) => {
           {filteredActivities.length > 0 ? (
             filteredActivities.map((activity, index) => (
               <tr key={index} className="border-b">
-                <td className="p-2 md:p-4 text-sm md:text-md whitespace-nowrap">
+                <td className="p-3 md:p-4 text-sm md:text-md whitespace-nowrap">
                   {activity.idQuiz.title}
                 </td>
-                <td className="p-2 md:p-4 text-sm md:text-md whitespace-nowrap">
+                <td className="p-3 md:p-4 text-sm md:text-md whitespace-nowrap">
                   {activity.score}
                 </td>
-                <td className="p-2 md:p-4 text-sm md:text-md whitespace-nowrap">
+                <td className="p-3 md:p-4 text-sm md:text-md whitespace-nowrap">
                   {new Date(activity.completedAt).toLocaleDateString()}
                 </td>
-                <td className="p-2 md:p-4 text-sm md:text-md whitespace-nowrap">
+                <td className="p-3 md:p-4 text-sm md:text-md whitespace-nowrap">
                   <Link
                     to={`/result-quiz/${activity.resultQuizId}`}
                     className="bg-indigo-600 text-white  px-3 py-1 md:px-4 md:py-2 rounded-md hover:bg-indigo-700"
@@ -51,7 +51,7 @@ const TableActivityLog = ({handleSort, handleDelete, filteredActivities}) => {
                     Review
                   </Link>
                 </td>
-                <td className="p-2 md:p-4 text-sm md:text-md whitespace-nowrap">
+                <td className="p-3 md:p-4 text-sm md:text-md whitespace-nowrap">
                   <button
                     className="text-red-500 hover:text-red-700"
                     onClick={() => handleDelete(activity._id)}
