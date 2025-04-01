@@ -105,7 +105,7 @@ const QuestionPage = () => {
               <p>Jumlah Pertanyaan: {questions.length}</p>
               <Button
                 onClick={handleAddQuestion}
-                className="my-2 mx-1 text-white bg-indigo-600 px-4 py-2 rounded-lg"
+                className="my-2 mx-1 bg-white text-indigo-600 px-4 py-2 rounded-lg"
               >
                 + Add Question
               </Button>
@@ -113,7 +113,7 @@ const QuestionPage = () => {
           )}
           <Button
             onClick={() => navigate("/quiz")}
-            className={"my-2 text-white bg-indigo-600 px-4 py-2 rounded-lg"}
+            className={"my-2 bg-white text-indigo-600 px-4 py-2 rounded-lg"}
           >
             Back
           </Button>
