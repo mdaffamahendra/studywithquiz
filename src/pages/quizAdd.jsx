@@ -15,7 +15,7 @@ const QuizAddPage = () => {
     quizId: "",
     title: "",
     description: "",
-    field: "ya",
+    field: "Matematika",
     timeStart: "",
     timeEnd: "",
     timer: 0,
