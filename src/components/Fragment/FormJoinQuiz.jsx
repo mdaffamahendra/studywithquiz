@@ -36,7 +36,7 @@ const FormJoinQuiz = () => {
           }
 
           Swal.fire({
-            title: `Ingin mengerjakan ${res.title}?`,
+            text: `Ingin mengerjakan ${res.title}?`,
             icon: "question",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
