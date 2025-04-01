@@ -37,7 +37,7 @@ const Leaderboard = () => {
 
   return (
     <PageLayout>
-      <div className="min-h-screen px-6 py-24">
+      <div className="min-h-screen px-2 py-24">
         {quizInfo && (
           <div className="text-indigo-600 bg-white p-4 rounded-lg shadow-md mb-6">
             <h1 className="text-2xl font-semibold">{quizInfo.title}</h1>
@@ -51,14 +51,14 @@ const Leaderboard = () => {
             </div>
           </div>
         )}
-        <div className="bg-white text-indigo-600 black p-4 rounded-lg shadow-md">
+        <div className="bg-white text-indigo-600 black p-4 rounded-lg shadow-md overflow-auto">
           <h2 className="text-xl font-semibold mb-4">Leaderboard</h2>
           <table className="w-full border-collapse">
             <thead>
               <tr className="bg-indigo-200 font-bold">
-                <th className="py-2 px-4 text-left">Rank</th>
-                <th className="py-2 px-4 text-left">Name</th>
-                <th className="py-2 px-4 text-left">Score</th>
+                <th className="py-2 px-4 text-left whitespace-nowrap">Rank</th>
+                <th className="py-2 px-4 text-left whitespace-nowrap">Name</th>
+                <th className="py-2 px-4 text-left whitespace-nowrap">Score</th>
               </tr>
             </thead>
             <tbody>
@@ -67,10 +67,10 @@ const Leaderboard = () => {
                   <td className="py-2 px-4 flex items-center gap-2">
                     {index < 3 ? rankIcons[index] : index + 1}
                   </td>
-                  <td className="py-2 px-4 font-semibold">
+                  <td className="py-2 px-4 font-semibold whitespace-nowrap">
                     {player.userId.username}
                   </td>
-                  <td className="py-2 px-4 font-semibold">
+                  <td className="py-2 px-4 font-semibold whitespace-nowrap">
                     {player.totalScore}
                   </td>
                 </tr>
