@@ -28,7 +28,6 @@ const ActivityPage = () => {
       await getData("activity", token).then((data) => {
         setActivities(data.activities);
         setQuizCount(data.activities.length);
-        console.log(data);
       });
     } catch (error) {
       console.error("Error fetching activity:", error.message);
@@ -44,7 +43,6 @@ const ActivityPage = () => {
       try {
         await getData(`user-achievements`, token).then((res) => {
           setUserAchievements(res);
-          console.log(res);
         });
       } catch (error) {
         console.error("Error fetching activity:", error.message);
@@ -69,7 +67,6 @@ const ActivityPage = () => {
         try {
           await deleteData(`activity/${activityId}`, token).then(
             async (res) => {
-              console.log(res);
               await fetchActivity();
               Swal.fire({
                 icon: "success",
