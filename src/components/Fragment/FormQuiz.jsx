@@ -52,7 +52,7 @@ const FormQuiz = ({ use, error, handleSubmit, formData, handleChange, loading })
             <Option value={"Informatika"}>Informatika</Option>
             <Option value={"Bahasa"}>Bahasa</Option>
             <Option value={"MIPA"}>MIPA</Option>
-            <Option value={"MIPA"}>Seni Budaya</Option>
+            <Option value={"Seni Budaya"}>Seni Budaya</Option>
             <Option value={"Olahraga"}>Olahraga</Option>
           </Select>
         </InputSelect>
