@@ -25,7 +25,7 @@ const SearchModule = () => {
     };
   }, [debouncedSearch]);
 
-  const fields = ["Matematika", "Informatika", "Bahasa", "MIPA"];
+  const fields = ["Matematika", "Informatika", "Bahasa", "MIPA", "Seni Budaya", "Olahraga"];
 
   return (
     <PageLayout>

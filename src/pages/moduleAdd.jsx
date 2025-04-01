@@ -20,7 +20,7 @@ const AddModule = () => {
   const token = useSelector((state) => state.users.token);
   const navigate = useNavigate();
 
-  const fieldOptions = ["Matematika", "Informatika", "Bahasa", "MIPA"];
+  const fieldOptions = ["Matematika", "Informatika", "Bahasa", "MIPA", "Seni Budaya", "Olahraga"];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
