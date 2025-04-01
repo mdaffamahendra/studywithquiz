@@ -78,7 +78,7 @@ const FormQuiz = ({ use, error, handleSubmit, formData, handleChange, loading })
           value={formData.timer}
           onChange={handleChange}
         >
-          Waktu Mengerjakan Quiz
+          Waktu Mengerjakan Quiz (Dalam Menit)
         </InputForm>
         <Button
           type={"submit"}
