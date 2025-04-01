@@ -5,6 +5,7 @@ import Button from "../Element/Button";
 import { fetchQuizById } from "../../redux/slice/QuizSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Form from "../Element/Form";
+import Swal from "sweetalert2";
 
 const FormJoinQuiz = () => {
   const [quizId, setQuizId] = useState("");
@@ -33,7 +34,21 @@ const FormJoinQuiz = () => {
             setError("Maaf, quiz belum dibuka");
             return;
           }
-          navigate(`/quiz/in/${quizId}?next-question=1`);
+
+          Swal.fire({
+            title: `Ingin mengerjakan ${res.title}?`,
+            icon: "question",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Ya, ingin mengerjakan"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              navigate(`/quiz/in/${quizId}?next-question=1`);
+            }
+          });
+
+          
         });
     } catch (error) {
       setError(error.message);
