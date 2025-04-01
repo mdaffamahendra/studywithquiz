@@ -42,9 +42,9 @@ const Leaderboard = () => {
           <div className="text-indigo-600 bg-white p-4 rounded-lg shadow-md mb-6">
             <h1 className="text-2xl font-semibold">{quizInfo.title}</h1>
             <div className="flex items-center gap-3 mt-2">
-              <User size={16} /> <span>{quizInfo.createdBy.username}</span>
+              <User size={16} /> <span className="text-sm md:text-md">{quizInfo.createdBy.username}</span>
               <Calendar size={16} />{" "}
-              <span>{formatDateTime(quizInfo.timeStart)}</span>
+              <span className="text-sm md:text-md">{formatDateTime(quizInfo.timeStart)}</span>
             </div>
             <div className="flex items-center gap-3 mt-2">
               <Book size={16} /> <span>{quizInfo.description}</span>
@@ -56,21 +56,21 @@ const Leaderboard = () => {
           <table className="w-full border-collapse">
             <thead>
               <tr className="bg-indigo-200 font-bold">
-                <th className="py-2 px-4 text-left whitespace-nowrap">Rank</th>
-                <th className="py-2 px-4 text-left whitespace-nowrap">Name</th>
-                <th className="py-2 px-4 text-left whitespace-nowrap">Score</th>
+                <th className="py-3 px-4 text-left whitespace-nowrap">Rank</th>
+                <th className="py-3 px-4 text-left whitespace-nowrap">Name</th>
+                <th className="py-3 px-4 text-left whitespace-nowrap">Score</th>
               </tr>
             </thead>
             <tbody>
               {leaderboard.map((player, index) => (
                 <tr key={index} className="border-b">
-                  <td className="py-2 px-4 flex items-center gap-2">
+                  <td className="py-3 px-4 flex items-center gap-2">
                     {index < 3 ? rankIcons[index] : index + 1}
                   </td>
-                  <td className="py-2 px-4 font-semibold whitespace-nowrap">
+                  <td className="py-3 px-4 font-semibold whitespace-nowrap">
                     {player.userId.username}
                   </td>
-                  <td className="py-2 px-4 font-semibold whitespace-nowrap">
+                  <td className="py-3 px-4 font-semibold whitespace-nowrap">
                     {player.totalScore}
                   </td>
                 </tr>
