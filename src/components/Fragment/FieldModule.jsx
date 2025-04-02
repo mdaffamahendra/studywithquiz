@@ -72,7 +72,7 @@ const FieldModule = React.memo(({ field }) => {
   };
 
   return (
-    <div ref={observerRef} className="w-full my-12 pr-10 pl-8">
+    <div ref={observerRef} className="w-full my-12">
       {isLoading ? (
         <p className="text-white">Loading...</p>
       ) : (
