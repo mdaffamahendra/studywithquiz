@@ -71,8 +71,7 @@ const QuizField = React.memo(({ field }) => {
 
   return (
     <div ref={observerRef} className="w-full mb-12">
-      {data && <h2 className="text-xl font-bold text-white my-4">{field}</h2>}
-      {isLoading && <p className="text-white">Loading quizzes...</p>}
+      {isLoading ? <p className="text-white">Loading quizzes...</p> :  <h2 className="text-xl font-bold text-white my-4">{field}</h2>}
       {isError && <p className="text-red-300">Error loading quizzes</p>}
       {data && data.length === 0 && (
         <p className="text-white">No quizzes found for this category.</p>
@@ -81,8 +80,8 @@ const QuizField = React.memo(({ field }) => {
       <div className="relative">
         <div
           ref={scrollContainer}
-          className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide py-2"
           onScroll={handleScroll}
+          className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide py-2"
         >
           {data?.map((quiz, index) => (
             <CardQuizStudent

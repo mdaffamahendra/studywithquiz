@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 import PageLayout from "../components/Layout/PageLayout";
 import ActivityInformation from "../components/Fragment/ActivityInformation";
 import ActivityLog from "../components/Fragment/ActivityLog";
+import LoadingElement from "../components/Element/LoadingElement";
 
 const ActivityPage = () => {
   const [activities, setActivities] = useState([]);
@@ -17,13 +18,13 @@ const ActivityPage = () => {
   const [sortOrder, setSortOrder] = useState("asc");
   const [userAchievements, setUserAchievements] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const token = useSelector((state) => state.users.token);
-  const user = useSelector((state) => state.users.user);
-  const role = user?.role;
 
   const fetchActivity = async () => {
+    setIsLoading(true);
     try {
       await getData("activity", token).then((data) => {
         setActivities(data.activities);
@@ -31,6 +32,8 @@ const ActivityPage = () => {
       });
     } catch (error) {
       console.error("Error fetching activity:", error.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -107,6 +110,8 @@ const ActivityPage = () => {
       const valB = sortBy === "date" ? new Date(b.completedAt) : b[sortBy];
       return sortOrder === "asc" ? valA - valB : valB - valA;
     });
+
+  if (isLoading) return <LoadingElement />;
 
   return (
     <PageLayout>

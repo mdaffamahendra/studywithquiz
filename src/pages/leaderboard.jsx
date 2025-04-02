@@ -5,16 +5,17 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Navbar from "../components/Element/Navbar";
 import PageLayout from "../components/Layout/PageLayout";
+import LoadingElement from "../components/Element/LoadingElement";
 
 const Leaderboard = () => {
   const [quizInfo, setQuizInfo] = useState(null);
   const [leaderboard, setLeaderboard] = useState([]);
   const { quizId } = useParams();
   const token = useSelector((state) => state.users.token);
-  const user = useSelector((state) => state.users.user);
-  const role = user?.role;
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     const fetchLeaderboard = async () => {
       try {
         await getData(`leaderboard/${quizId}`, token).then((res) => {
@@ -23,6 +24,8 @@ const Leaderboard = () => {
         });
       } catch (error) {
         console.log(error.message);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -34,6 +37,8 @@ const Leaderboard = () => {
     <Crown key={2} className="text-gray-400" size={20} />,
     <Crown key={3} className="text-orange-500" size={20} />,
   ];
+
+  if(isLoading) return <LoadingElement />
 
   return (
     <PageLayout>
