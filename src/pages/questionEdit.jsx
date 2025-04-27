@@ -21,7 +21,7 @@ const EditQuestion = () => {
 
   const [formData, setFormData] = useState({
     question: "",
-    options: ["", "", "", ""],
+    options: ["", "", "", "", ""],
     correctAnswer: "",
     image: null,
     score: 0,

@@ -17,7 +17,7 @@ const AddQuestion = () => {
   const token = useSelector((state) => state.users.token);
   const [formData, setFormData] = useState({
     question: "",
-    options: ["", "", "", ""],
+    options: ["", "", "", "", ""],
     correctAnswer: "",
     image: null,
     score: 0,
